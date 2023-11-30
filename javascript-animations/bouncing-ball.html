@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Animation</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="200"></canvas>
+
+  <script>
+    // Get the canvas element and its context
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Initial ball position and velocity
+    let x = 50;
+    let y = 50;
+    let dx = 5;
+    let dy = 2;
+
+    // Function to draw the ball
+    function drawBall() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath();
+      ctx.arc(x, y, 20, 0, Math.PI * 2);
+      ctx.fillStyle = '#0095DD';
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    // Function to update the ball's position
+    function updateBall() {
+      x += dx;
+      y += dy;
+
+      // Bounce off the walls
+      if (x + 20 > canvas.width || x - 20 < 0) {
+        dx = -dx;
+      }
+
+      if (y + 20 > canvas.height || y - 20 < 0) {
+        dy = -dy;
+      }
+    }
+
+    // Function to animate the canvas
+    function animate() {
+      drawBall();
+      updateBall();
+      requestAnimationFrame(animate);
+    }
+
+    // Start the animation
+    animate();
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Animation</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="200"></canvas>
+
+  <script>
+    // Get the canvas element and its context
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Initial square position and velocity
+    let x = 50;
+    const y = 50;
+    const squareSize = 50;
+    const dx = 2; // velocity in the x-axis
+
+    // Function to draw the square
+    function drawSquare() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#0095DD';
+      ctx.fillRect(x, y, squareSize, squareSize);
+    }
+
+    // Function to update the square's position
+    function updateSquare() {
+      x += dx;
+
+      // If the square goes off the right side of the canvas, reset its position
+      if (x + squareSize > canvas.width) {
+        x = 0 - squareSize;
+      }
+    }
+
+    // Function to animate the canvas
+    function animate() {
+      drawSquare();
+      updateSquare();
+      requestAnimationFrame(animate);
+    }
+
+    // Start the animation
+    animate();
+  </script>
+</body>
+</html>
