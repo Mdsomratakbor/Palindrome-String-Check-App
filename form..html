@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Form</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        /* Style for form container */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Style for labels */
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Style for text input fields */
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Style for radio buttons */
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        /* Style for select box */
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the hidden field (initially hidden) */
+        #hiddenField {
+            display: none;
+        }
+
+        /* Style for the submit button */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Style for the submit button on hover */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Sample Form</h2>
+    <div class="form-container">
+        <form action="submit_form.php" method="POST">
+            <label for="firstName">First Name*</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name*</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="hiddenField">Hidden Field (This will be hidden)</label>
+            <input type="text" id="hiddenField" name="hiddenField">
+
+            <label>Do you have a website?</label>
+            <input type="radio" id="radioYes" name="website" value="yes" onclick="toggleHiddenField();">Yes
+            <input type="radio" id="radioNo" name="website" value="no" onclick="toggleHiddenField();">No
+
+            <label for="websiteType">Website Type</label>
+            <select id="websiteType" name="websiteType">
+                <option value="blog">Blog</option>
+                <option value="portfolio">Portfolio</option>
+                <option value="e-commerce">E-commerce</option>
+                <option value="other">Other</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+<script>
+
+        function toggleHiddenField() {
+            var hiddenField = document.getElementById("hiddenField");
+            hiddenField.style.display = document.getElementById("radioYes").checked ? "block" : "none";
+        }
+
+</script>
+</html>

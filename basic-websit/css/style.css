@@ -1,0 +1,243 @@
+/* General styles for all pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  /* Header styles for all pages */
+  header {
+    background-color: #5cbef6;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    margin-bottom: 2px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  /* Footer styles for all pages */
+  footer {
+    background-color: #5cbef6;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  /* Content section styles for all pages */
+  section {
+    padding-top: 76px; /* Adjust this value to control the space between the header and content */
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 26px;
+  }
+  
+  a {
+    color: #0074d9;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+/* Home Page */
+#home-content {
+      margin: 0 auto;
+      text-align: center;
+      padding: 148px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #home-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  #home-content h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #home-content ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  #home-content li {
+    margin-bottom: 10px;
+  }
+  
+/* Existing styles */
+
+/* About Page Styles */
+.about-section {
+  padding: 76px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.profile-image {
+  max-width: 30%;
+  border-radius: 20%;
+  margin: 20px 0;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+}
+
+.social-links img {
+  width: 79px;
+  height: 71px;
+  display: block;
+}
+  
+  /* Portfolio Page */
+  #portfolio-content {
+    text-align: center;
+  }
+  
+  /* Services Page */
+  #services-content {
+    text-align: center;
+  }
+  
+ /* General styles for all pages */
+/* ... (Previous styles) ... */
+
+/* Contact Page */
+#contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #contact-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #contact-form input[type="submit"] {
+    background-color: #0074d9;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  .button {
+    background-color: #6698c4;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    
+  }
+  .button:hover {
+    text-decoration: none;
+    background-color: #0056b3;
+  }
+  .academic-table {
+    width: 73%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  .academic-table th, .academic-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .academic-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .academic-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .academic-table tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  /* Centered List Styles */
+.centered-list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
+.centered-list li {
+  text-align: center;
+  margin: 10px 0;
+}
+.services-section {
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.services-section ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
+.services-section li {
+  margin: 10px 0;
+}
